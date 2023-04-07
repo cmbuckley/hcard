@@ -1,0 +1,28 @@
+title: Digital Card
+description: Digital business card
+host: 0.0.0.0
+
+url: ""
+baseurl: ""
+timezone: Europe/London
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      type: profiles
+    values:
+      layout: profile
+  - scope:
+      type: vcf
+    values:
+      layout: vcard
+
+collections:
+  profiles:
+    output: true
+    permalink: /profiles/:name/
+  vcf:
+    output: true
+    permalink: /profiles/:name/vcard.vcf
