@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/profiles/*/vcard.vcf"
+
+  [headers.values]
+    Content-Type = "text/vcard"
