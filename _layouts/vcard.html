@@ -1,1 +1,19 @@
-FN:{{ page.name }}
+BEGIN:VCARD
+VERSION:3.0
+FN:{% if page.name.display %}{{ page.name.display }}{% else %}{{ page.name.given }} {{ page.name.family }}{% endif %}
+N:{{ page.name.family }};{{ page.name.given }}
+{%- if page.email %}
+{%- for email in page.email %}
+EMAIL{% if email.type %};{{ email.type | upcase }}{% endif %}:{{ email.value }}
+{%- endfor %}
+{%- endif %}
+{%- if page.org %}
+ORG:{{ page.org }}
+{%- endif %}
+{%- if page.role %}
+TITLE:{{ page.role }}
+{%- endif %}
+{%- if page.url %}
+URL:{{ page.url }}
+{%- endif %}
+END:VCARD
