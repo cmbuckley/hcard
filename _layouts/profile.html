@@ -5,9 +5,12 @@ layout: default
   <div class="card">
     <div class="photo"></div>
     <div class="banner"></div>
+    <hgroup>
       <h1>{{ page.name }}</h1>
-      <li>{{ page.role }}</li>
+      <p>{{ page.role }}</p>
+    </hgroup>
     <button class="contact" id="main-button">click to get in touch</button>
+    <a href="{{ page.url }}vcard.vcf">VCF</a>
     <div class="social-media-banner">
       <a href=""><i class="fa fa-twitter"></i></a>
       <a href=""><i class="fa fa-facebook"></i></a>
