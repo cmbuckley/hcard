@@ -17,6 +17,6 @@ TITLE:{{ page.role }}
 URL:{{ page.homepage }}
 {%- endif %}
 {%- if page.photo %}
-PHOTO:{%- base64 page.photo %}
+PHOTO;ENCODING=BASE64:{%- base64 page.photo %}
 {%- endif %}
 END:VCARD
