@@ -3,25 +3,15 @@ layout: default
 ---
 <body>
   <div class="card">
-    <div class="photo"></div>
+    <div class="photo">
+      {% if page.photo %}<img src="{{ page.photo }}" />{% endif %}
+    </div>
     <div class="banner"></div>
     <hgroup>
-      <h1>{{ page.name }}</h1>
+      <h1>{{ page.name.given }} {{ page.name.family }}</h1>
       <p>{{ page.role }}</p>
     </hgroup>
-    <button class="contact" id="main-button">click to get in touch</button>
-    <a href="{{ page.url }}vcard.vcf">VCF</a>
-    <div class="social-media-banner">
-      <a href=""><i class="fa fa-twitter"></i></a>
-      <a href=""><i class="fa fa-facebook"></i></a>
-      <a href=""><i class="fa fa-instagram"></i></a>
-      <a href=""><i class="fa fa-linkedin"></i></a>
-    </div>
-    <form class="email-form">
-      <input id="name" type="text" placeholder="name">
-      <input id="email" type="text" placeholder="email">
-      <textarea id="comment" type="text" placeholder="comment"></textarea>
-      <button class="contact">send</button>
-    </form>
+    <p>Home page: <a href="{{ page.homepage }}">{{ page.homepage }}</a></p>
+    <a href="{{ page.url }}vcard.vcf">Add to contacts</a>
   </div>
 </body>

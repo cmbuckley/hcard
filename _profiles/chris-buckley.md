@@ -8,5 +8,6 @@ email:
     type: work
 org: Answer Digital
 role: Principal Architect
-url: https://cmbuckley.co.uk
+homepage: https://cmbuckley.co.uk
+photo: /photos/chris-buckley.png
 ---

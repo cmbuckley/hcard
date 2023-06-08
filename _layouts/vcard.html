@@ -13,7 +13,10 @@ ORG:{{ page.org }}
 {%- if page.role %}
 TITLE:{{ page.role }}
 {%- endif %}
-{%- if page.url %}
-URL:{{ page.url }}
+{%- if page.homepage %}
+URL:{{ page.homepage }}
+{%- endif %}
+{%- if page.photo %}
+PHOTO;VALUE=uri:{{ page.photo | absolute_url }}
 {%- endif %}
 END:VCARD
